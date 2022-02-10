@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style type="text/css">
+     body{ background-color: #f6f6f6; font-family: tahoma;}
+    .container{width: 980px; height: 650px; margin: 10px auto; border: 1px dashed #bd652b; padding: 20px 0 20px 40px; }
+    section{ width: 450px; height:220px ;  float: left; margin: 0 40px 60px 0;}
+    aside{ width: 450px; height:120px ;  float: left; margin: 0 40px 60px 0;}
+    footer{ width: 980px; height: 100px; float: left;}
+    .kutununbaslıgı{ width: 450px; padding: 0 0 10px 0; margin: 0 0 15px 0;  border-bottom:2px solid #dd9d42; color: #104579; font: bold 19px tahoma;}
+    section input, aside input { width: 300px; padding: 5px; border: #104579; font-size: 14px; }
+    section input:hover { border: 1px dashed #bd652b; background-color: #f0ddbc;}
+    input.radyo { width: 15px;}
+    input.onay{ width: 15px;}
+    textarea{ width: 930px; height: 65px; border:1px solid #ddd ; background-color: white; padding: 5px; color: #4b4b4b;}
+    button, input.gonder { width: 100px; padding: 10px 25px; margin: 0 30px 20px 0; color: white;font-size: 14px; background-color: #24588f;  cursor: pointer; border: none;}
+    tr:hover{ color: #bd652b;}
+    tr:hover .siyah{ color: #000;}
+    input:focus{outline: none; }
+    input:focus, textarea:focus { outline: none;}
+    #askerlik{ width: 300px; padding: 5px; border: 1px dashed #a0a0a0; color: #104579; font-size: 14px; }
+
+    </style>
+<script type="text/javascript">
+function askerlikdurumu (deger)
+{
+
+if (document.getElementById(deger).value='Erkek')
+{}
+else
+{}
+ }
+
+</script>
+</head>
+<body> <form action="" method="get">
+    <div class="container">
+<section>
+    <div class="kutununbaslıgı">Kişisel Bilgiler </div>
+    <table width="450" height="220" >
+        <tr>
+            <td width="145">Ad</td>
+            <td width="5"> <strong>:</strong></td>
+            <td width="300"> <input name="" type="text" required="required" placeholder="Adınızı Giriniz." ></td>
+        </tr>
+        <tr>
+            <td>Soyad</td>
+            <td><strong>:</strong></td>
+            <td><input name="" type="text" placeholder="Soyadınızı Giriniz." required="required"></td>
+        </tr>
+        <tr>
+            <td>Doğum Tarihi</td>
+            <td><strong>:</strong></td>
+            <td><input name="" type="date" required="required"></td>
+        </tr>
+        <tr>
+            <td>Telefon</td>
+            <td><strong>:</strong></td>
+            <td><input name="" type="text" placeholder="(xxx) xxx xx xx"  required="required" pattern="[\( ]\d{3}[\) ] [\s]\d{3}[\s]\d{2}[\s] \d{2}"></td>
+        </tr>
+        <tr>
+            <td>Mail</td>
+            <td><strong>:</strong></td>
+            <td><input name="" type="email" placeholder="Mail Adresinizi Giriniz" > </td>
+        </tr>
+        <tr>
+            <td>Cinsiyet</td>
+            <td><strong>:</strong></td>
+            <td class="siyah"><input  id="erkek" name="cinsiyet" type="radio" value="" class="radyo"  required="required" onclick="askerlikdurumu (this.id) "/> Erkek
+                <input  id="kadin" name="cinsiyet" type="radio" value="" class="radyo" required="required" /> Kız
+                <input id="askerlik" name="askerlik" type="hidden" value="" placeholder="Askerlik Durumunu Giriniz" />
+        </tr>
+      
+    </table>
+
+</section>
+
+<section>
+    <div class="kutununbaslıgı">Eğitim Durumu</div>
+    <table width="450" height="220" >
+        <tr>
+            <td  width="145">İlkokul</td>
+            <td width="5"> <strong>:</strong></td>
+            <td width="300"> <input name="" type="text" placeholder="Okuduğunuz İlkokulu Giriniz " required="required"></td>
+        </tr>
+        <tr>
+            <td>Ortaokul</td>
+            <td><strong>:</strong></td>
+            <td><input name="" type="text"  required="required"placeholder="Okuduğunuz Ortaokulu Giriniz "></td>
+        </tr>
+        <tr>
+            <td>Lise</td>
+            <td><strong>:</strong></td>
+            <td><input name="" type="date" required="required" placeholder="Okuduğunuz Liseyi Giriniz "> </td>
+        </tr>
+        <tr>
+            <td>Üniversite</td>
+            <td><strong>:</strong></td>
+            <td><input name="" type="text" required="required" placeholder="Okuduğunuz Üniversiteyi Giriniz "></td>
+        </tr>
+        <tr>
+            <td>Yüksek Lisans</td>
+            <td><strong>:</strong></td>
+            <td><input name="" type="text" required="required" placeholder=" Yüksek Lisans Yaptığınız Üniversiteyi Giriniz "></td>
+        </tr>
+        <tr>
+            <td>Yabancı Dil</td>
+            <td><strong>:</strong></td>
+            <td class="siyah"><input name="yabancıdil" type="checkbox" value="" class="onay" required="required" /> İngilizce
+                <input name="yabancıdil" type="checkbox" value="" class="onay" required="required" /> Almanca
+                <input name="yabancıdil" type="checkbox" value="" class="onay"  required="required" /> Fransızca
+               
+                
+        </tr>
+    </table>
+</section>
+<aside>
+    <div class="kutununbaslıgı">İlgi Alanları</div>
+    <input name="" type="checkbox" value="" class="onay"/> Sinema  <br/>
+    <input name="" type="checkbox" value="" class="onay"/> Tiyatro <br/>
+    <input name="" type="checkbox" value="" class="onay"/> Spor <br/>
+    <input name="" type="checkbox" value="" class="onay"/> Kitap <br/>
+    <input name="" type="checkbox" value="" class="onay"/> Diğer <br/>
+</aside>
+<aside>
+    <div class="kutununbaslıgı">Beceriler </div>
+    <input name="" type="checkbox" value=""class="onay" /> Html <br/>
+    <input name="" type="checkbox" value=""class="onay" /> Css <br/>
+    <input name="" type="checkbox" value="" class="onay"/> Php <br/>
+    <input name="" type="checkbox" value="" class="onay"/> Asp.net <br/>
+    <input name="" type="checkbox" value=""class="onay" /> Diğer <br/>
+</aside>
+<footer>
+    <div class="kutununbaslıgı">Düşünceleriniz</div>
+     <textarea></textarea> <br/> <br/>
+     <button>Gönder</button>
+     <input  class="gonder" name="" type="reset">
+
+</footer>
+    </div>
+</form>
+</body>
+</html>
